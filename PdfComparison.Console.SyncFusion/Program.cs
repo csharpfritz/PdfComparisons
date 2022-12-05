@@ -17,7 +17,7 @@ internal class Program
 			//Convert URL to PDF and save the PDF document. 
 			var document = htmlConverter.Convert("https://localhost:7245/");
 			htmlConverter.ConverterSettings.AdditionalDelay = 5000;
-			htmlConverter.ConverterSettings.
+
 			//Save and closes the document. 
 
 			using var file = File.OpenWrite("form-sync.pdf");

@@ -1,7 +1,7 @@
 ﻿using IronPdf;
 using System.Diagnostics;
 
-FormWeb();
+StaticWeb();
 
 void HelloWorldDemo()
 {
@@ -19,9 +19,7 @@ void StaticWeb()
 
 	var sw = new Stopwatch();
 	sw.Start();
-	var Renderer = new IronPdf.ChromePdfRenderer(options => {
-		RenderDelay = TimeSpan.FromSeconds(1)
-	});
+  var Renderer = new IronPdf.ChromePdfRenderer(); 
 	Renderer.RenderingOptions.RenderDelay = 1000;
 	using var pdf = Renderer.RenderUrlAsPdf("https://kliptokaspnetcore.azurewebsites.net/");
 
